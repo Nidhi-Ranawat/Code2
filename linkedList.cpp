@@ -36,20 +36,22 @@ int main(){
     FIRST = (Node*)malloc(sizeof(struct Node));
     FIRST -> data = 100;
     FIRST -> link = NULL;
+    cout<<"\n First -> " <<FIRST ->data;
 
     n1 = (Node*)malloc(sizeof(struct Node));
     n1 -> data = 200;
     n1 -> link = NULL;
     FIRST -> link = n1;
+    cout<<" -> "<<n1->data;
 
     n1 = (Node*)malloc(sizeof(struct Node));
     n1 -> data = 300;
     n1 -> link = NULL;
+    cout<<" -> "<<n1->data;
 
     FIRST -> link -> link = n1;
+    cout<<" -> NULL";
     
-    cout<<"\n First -> " <<FIRST ->data <<" -> "<<n1->data<<" -> "<<n2->data<<" -> NULL";
-
 // METHOD-3 Printing data within each NODE using LOOP
 
     struct Node *temp;
