@@ -39,7 +39,7 @@ void push(int data)
         TOP = temp;
 } 
 
-//TO REMOVE THE LAST ELEMENT FROM THE STACK
+//TO REMOVE THE TOP ELEMENT FROM THE STACK
 int pop()
 { 
     struct Node* temp;
