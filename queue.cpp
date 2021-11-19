@@ -1,3 +1,4 @@
+//PROGRAM FOR INSERTION AND DELETIONS OF ELEMENT IN THE QUEUE 
 #include<stdio.h>
 #include<iostream>
 #include<conio.h>
@@ -8,6 +9,7 @@ using namespace std;
 int QUEUE[SIZE];
 int front = -1, rear = -1;
 
+//TO INSERT ELEMENTS IN THE QUEUE THROUGH THE REAR END
 void enqueue(int val)
 {
     if (rear == (SIZE - 1))
@@ -24,6 +26,7 @@ void enqueue(int val)
     QUEUE [rear] = val;
 }
 
+//TO DELETE ELEMENTS IN THE QUEUE FROM THE FRONT END
 int dequeue()
 {
     int del = 0;
@@ -45,6 +48,7 @@ int dequeue()
     return del ;
 }
 
+//TO DISPLAY THE ELEMENTS IN THE QUEUE FROM FRONT TO REAR END
 void display()
 {
     if(front == -1 && rear == -1)                               //if the stack is EMPTY
