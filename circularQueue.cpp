@@ -6,7 +6,7 @@
 using namespace std;
 #define SIZE 3
 
-int QUEUE[SIZE];
+int CQUEUE[SIZE];
 int front = -1, rear = -1;
 
 //TO INSERT ELEMENTS IN THE QUEUE THROUGH THE REAR END
@@ -27,7 +27,7 @@ void enqueue(int val)
     else
         rear++;
 
-    QUEUE [rear] = val;
+    CQUEUE [rear] = val;
 }
 
 //TO DELETE ELEMENTS IN THE QUEUE FROM THE FRONT END
@@ -41,7 +41,7 @@ int dequeue()
         exit(1);
     }
 
-    del = QUEUE[front];                                                                    //value of deleted front element
+    del = CQUEUE[front];                                                                    //value of deleted front element
 
     if ((front == 0 && rear == 0) || (front == (SIZE - 1) && rear == (SIZE-1)))            //if only single element exists
         front = rear = -1;
@@ -67,7 +67,7 @@ void cirQueue()
     if (front <= rear)                                                                     
     {
         for (int i = front; i <= rear; i++)
-        cout << QUEUE[i] << "\t";
+        cout << CQUEUE[i] << "\t";
     }
 
     else  if (front >= rear)
@@ -75,13 +75,13 @@ void cirQueue()
         int i = front;
         while ( i <= (SIZE - 1))
         {
-            cout << QUEUE[i] << "\t";
+            cout << CQUEUE[i] << "\t";
             i++;
         }
         i = 0;                                                                              //starting from the front position
         while ( i <= rear)                                                                  //till rear
         {
-            cout << QUEUE[i] << "\t"; 
+            cout << CQUEUE[i] << "\t"; 
             i++; 
         }        
     }
@@ -92,7 +92,7 @@ int main()
     int ch, val;
     char c;
     do{
-        cout << "\nQUEUE OPERATIONS MENU -\n";
+        cout << "\nCIRCULAR QUEUE OPERATIONS MENU -\n";
         cout << "\n 1)Insert an element in the queue";
         cout << "\n 2)Delete an element from the queue";
     
@@ -122,7 +122,7 @@ int main()
         cin >> c;
         if ((c == 'n') || (c == 'N'))
         {
-        cout << "\nQUEUE after performing ADDITIONS and DELETIONS :- \n";
+        cout << "\nCIRCULAR QUEUE after performing ADDITIONS and DELETIONS :- \n";
         cirQueue();
         }
     } while ((c == 'y') || (c == 'Y')); 
